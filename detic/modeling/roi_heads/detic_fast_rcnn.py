@@ -20,8 +20,8 @@ from detectron2.modeling.roi_heads.fast_rcnn import fast_rcnn_inference
 from detectron2.modeling.roi_heads.fast_rcnn import _log_classification_stats
 
 from torch.cuda.amp import autocast
-from ..utils import load_class_freq, get_fed_loss_inds
-from .zero_shot_classifier import ZeroShotClassifier
+from detic.modeling.utils import load_class_freq, get_fed_loss_inds
+from detic.modeling.roi_heads.zero_shot_classifier import ZeroShotClassifier
 
 __all__ = ["DeticFastRCNNOutputLayers"]
 

@@ -18,8 +18,8 @@ from detectron2.utils.visualizer import Visualizer, _create_text_labels
 from detectron2.data.detection_utils import convert_image_to_rgb
 
 from torch.cuda.amp import autocast
-from ..text.text_encoder import build_text_encoder
-from ..utils import load_class_freq, get_fed_loss_inds
+from detic.modeling.text.text_encoder import build_text_encoder
+from detic.modeling.utils import load_class_freq, get_fed_loss_inds
 
 @META_ARCH_REGISTRY.register()
 class CustomRCNN(GeneralizedRCNN):

@@ -20,8 +20,8 @@ from detectron2.modeling.roi_heads.fast_rcnn import fast_rcnn_inference
 from detectron2.modeling.roi_heads.roi_heads import ROI_HEADS_REGISTRY, StandardROIHeads
 from detectron2.modeling.roi_heads.cascade_rcnn import CascadeROIHeads, _ScaleGradient
 from detectron2.modeling.roi_heads.box_head import build_box_head
-from .detic_fast_rcnn import DeticFastRCNNOutputLayers
-from ..debug import debug_second_stage
+from detic.modeling.roi_heads.detic_fast_rcnn import DeticFastRCNNOutputLayers
+from detic.modeling.debug import debug_second_stage
 
 from torch.cuda.amp import autocast
 

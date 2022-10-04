@@ -4,7 +4,7 @@ import os
 
 from detectron2.data.datasets.builtin_meta import _get_builtin_metadata
 from detectron2.data.datasets.lvis import get_lvis_instances_meta
-from .lvis_v1 import custom_register_lvis_instances
+from detic.data.datasets.lvis_v1 import custom_register_lvis_instances
 
 _CUSTOM_SPLITS = {
     "cc3m_v1_val": ("cc3m/validation/", "cc3m/val_image_info.json"),

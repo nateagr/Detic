@@ -23,7 +23,7 @@ from detectron2.evaluation.coco_evaluation import COCOEvaluator
 from detectron2.structures import Boxes, BoxMode, pairwise_iou
 from detectron2.utils.file_io import PathManager
 from detectron2.utils.logger import create_small_table
-from ..data.datasets.coco_zeroshot import categories_seen, categories_unseen
+from detic.data.datasets.coco_zeroshot import categories_seen, categories_unseen
 
 class CustomCOCOEvaluator(COCOEvaluator):
     def _derive_coco_results(self, coco_eval, iou_type, class_names=None):

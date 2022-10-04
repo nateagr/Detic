@@ -15,8 +15,8 @@ from detectron2.data.dataset_mapper import DatasetMapper
 from detectron2.structures import Boxes, BoxMode, Instances
 from detectron2.structures import Keypoints, PolygonMasks, BitMasks
 from fvcore.transforms.transform import TransformList
-from .custom_build_augmentation import build_custom_augmentation
-from .tar_dataset import DiskTarDataset
+from detic.data.custom_build_augmentation import build_custom_augmentation
+from detic.data.tar_dataset import DiskTarDataset
 
 __all__ = ["CustomDatasetMapper"]
 

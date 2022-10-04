@@ -6,7 +6,7 @@ import math
 
 from detectron2.modeling import META_ARCH_REGISTRY, build_backbone
 from detectron2.structures import Boxes, Instances
-from ..utils import load_class_freq, get_fed_loss_inds
+from detic.modeling.utils import load_class_freq, get_fed_loss_inds
 
 from models.backbone import Joiner
 from models.deformable_detr import DeformableDETR, SetCriterion, MLP

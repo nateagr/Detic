@@ -8,7 +8,7 @@ from PIL import Image
 
 
 from detectron2.data import transforms as T
-from .transforms.custom_augmentation_impl import EfficientDetResizeCrop
+from detic.data.transforms.custom_augmentation_impl import EfficientDetResizeCrop
 
 def build_custom_augmentation(cfg, is_train, scale=None, size=None, \
     min_size=None, max_size=None):

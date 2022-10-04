@@ -1,11 +1,17 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
+import os
 import torch
 import json
 import numpy as np
 from torch.nn import functional as F
 
+def _absolute_path(path):
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    return os.path.join(root_dir, path)
+
 def load_class_freq(
     path='datasets/metadata/lvis_v1_train_cat_info.json', freq_weight=1.0):
+    path = _absolute_path(path)
     cat_info = json.load(open(path, 'r'))
     cat_info = torch.tensor(
         [c['image_count'] for c in sorted(cat_info, key=lambda x: x['id'])])
@@ -30,6 +36,7 @@ def get_fed_loss_inds(gt_classes, num_sample_cats, C, weight=None):
 
 
 def reset_cls_test(model, cls_path, num_classes):
+    cls_path = _absolute_path(cls_path)
     model.roi_heads.num_classes = num_classes
     if type(cls_path) == str:
         print('Resetting zs_weight', cls_path)

@@ -4,7 +4,7 @@ import os
 
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.data.datasets.lvis import get_lvis_instances_meta
-from .lvis_v1 import custom_load_lvis_json, get_lvis_22k_meta
+from detic.data.datasets.lvis_v1 import custom_load_lvis_json, get_lvis_22k_meta
 def custom_register_imagenet_instances(name, metadata, json_file, image_root):
     """
     """
