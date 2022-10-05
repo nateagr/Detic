@@ -16,9 +16,13 @@ _REQUIREMENTS_TXT = _read_reqs("requirements.txt")
 
 setuptools.setup(
     name='detic_fork',
-    version='0.0.3',
+    version='0.0.4',
     install_requires=_REQUIREMENTS_TXT,
     include_package_data=True,
+    package_data={
+        'configs': ["*.yaml"],
+        'datasets': ["metadata/*.txt", "metadata/*.json", "metadata/*.csv", "metadata/*.npy"]
+    },
     description="Fork of repository https://github.com/facebookresearch/Detic",
     url="https://github.com/nateagr/Detic",
     packages=setuptools.find_packages()
