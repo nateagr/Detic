@@ -15,9 +15,10 @@ _REQUIREMENTS_TXT = _read_reqs("requirements.txt")
 
 
 setuptools.setup(
-    name='detic',
+    name='detic_fork',
     version='0.1',
     install_requires=_REQUIREMENTS_TXT,
     include_package_data=True,
+    description="Fork of https://github.com/facebookresearch/Detic",
     packages=setuptools.find_packages()
 )
