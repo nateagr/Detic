@@ -19,6 +19,6 @@ setuptools.setup(
     version='0.1',
     install_requires=_REQUIREMENTS_TXT,
     include_package_data=True,
-    description="Fork of https://github.com/facebookresearch/Detic",
+    description="Fork of repository https://github.com/facebookresearch/Detic",
     packages=setuptools.find_packages()
 )
