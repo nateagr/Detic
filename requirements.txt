@@ -1,7 +1,7 @@
 opencv-python
 mss
 timm
-dataclasses
+dataclasses; python_version < "3.7"
 ftfy
 regex
 scikit-learn

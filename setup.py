@@ -16,7 +16,7 @@ _REQUIREMENTS_TXT = _read_reqs("requirements.txt")
 
 setuptools.setup(
     name='detic_fork',
-    version='0.0.4',
+    version='0.0.5',
     install_requires=_REQUIREMENTS_TXT,
     include_package_data=True,
     package_data={
